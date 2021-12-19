@@ -1,0 +1,12 @@
+name: jenkins_remote_api
+description: Client to use Jenkins remote api
+version: 1.0.0
+
+
+environment:
+  sdk: '>=2.15.0 <3.0.0'
+
+
+dev_dependencies:
+  http:       '0.13.4'
+  http_auth:  '1.0.1'
