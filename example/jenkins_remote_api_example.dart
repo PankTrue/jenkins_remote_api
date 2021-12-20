@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:jenkins_remote_api/auth/auth_base.dart';
+import 'package:jenkins_remote_api/auth/http_auth.dart';
 import 'package:jenkins_remote_api/jenkins_remote_api.dart';
 
 import 'dart:async';
@@ -18,10 +20,14 @@ void main() async {
   // headerParams['Content-Type'] = "application/json";
 
 
-  var client    = http_auth.BasicAuthClient(username, password);
-  var response  = await client.get(url);
+  // var client    = http_auth.BasicAuthClient(username, password);
+  // var response  = await client.get(url);
 
+  HttpAuth client = new HttpAuth(url, username, password);
 
+  var response = await client.make_http_request("/computer/api/json", Method.GET);
+
+  print(response.body);
 
 
   Map<String,dynamic> res_json = json.decode(response.body);
