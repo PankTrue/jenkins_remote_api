@@ -1,5 +1,4 @@
-import 'package:http/http.dart';
-
+part of jenkins_remote_api;
 
 enum Method {
   GET,
@@ -9,11 +8,11 @@ enum Method {
 abstract class AuthBase
 {
   var client      = null;
-  String? address = null;
+  String? host = null;
 
-  AuthBase(String address){
-    this.address = address;
+  AuthBase(String host){
+    this.host = host;
   }
 
-  Future<Response> make_http_request(String path, Method method, { Map<String, String>? querryParams = null, Object body = ""});
+  Future<Response> make_http_request(String path, Method method, Map<String, String>? querryParams);
 }

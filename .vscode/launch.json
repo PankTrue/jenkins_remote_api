@@ -9,7 +9,7 @@
             "name": "jenkins_remote_api",
             "request": "launch",
             "type": "dart",
-            "program": "example/jenkins_remote_api_example.dart"
+            "program": "example/main.dart"
         }
     ]
 }
