@@ -17,14 +17,14 @@ class AuthHttp extends AuthBase
   @override
   Future<Response> make_http_request( String path, Method method, { Map<String, String>? querryParams = null}) async {
     
-    Future<Response> response;
+    var response;
     
     Uri request = Uri.http(host!, path, querryParams);
 
     switch(method)
     {
-      case Method.GET   : response = client.get(request); break;
-      case Method.POST  : response = client.post(request); break;
+      case Method.GET   : response = await client.get(request); break;
+      case Method.POST  : response = await client.post(request); break;
       default: { throw Exception("Request method $method not support for http!"); }
     }
 

@@ -14,5 +14,5 @@ abstract class AuthBase
     this.host = host;
   }
 
-  Future<Response> make_http_request(String path, Method method, Map<String, String>? querryParams);
+  Future<Response> make_http_request(String path, Method method, { Map<String, String>? querryParams = null});
 }
