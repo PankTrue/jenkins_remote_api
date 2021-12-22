@@ -16,7 +16,7 @@ class CauseUserIdCause {
     return 'CauseUserIdCause[class_=$class_, shortDescription=$shortDescription, userId=$userId, userName=$userName, ]';
   }
 
-  CauseUserIdCause.fromJson(Map<String, dynamic> json) {
+  CauseUserIdCause.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     shortDescription = json['shortDescription'];
@@ -33,7 +33,7 @@ class CauseUserIdCause {
     };
   }
 
-  static List<CauseUserIdCause> listFromJson(List<dynamic> json) {
+  static List<CauseUserIdCause> listFromJson(List<dynamic>? json) {
     return json == null ? <CauseUserIdCause>[] : json.map((value) => new CauseUserIdCause.fromJson(value)).toList();
   }
 

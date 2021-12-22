@@ -12,7 +12,7 @@ class CauseAction {
     return 'CauseAction[class_=$class_, causes=$causes, ]';
   }
 
-  CauseAction.fromJson(Map<String, dynamic> json) {
+  CauseAction.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     causes = CauseUserIdCause.listFromJson(json['causes']);
@@ -25,7 +25,7 @@ class CauseAction {
     };
   }
 
-  static List<CauseAction> listFromJson(List<dynamic> json) {
+  static List<CauseAction> listFromJson(List<dynamic>? json) {
     return json == null ? <CauseAction>[] : json.map((value) => new CauseAction.fromJson(value)).toList();
   }
 

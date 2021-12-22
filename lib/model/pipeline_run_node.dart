@@ -24,7 +24,7 @@ class PipelineRunNode {
     return 'PipelineRunNode[class_=$class_, displayName=$displayName, durationInMillis=$durationInMillis, edges=$edges, id=$id, result=$result, startTime=$startTime, state=$state, ]';
   }
 
-  PipelineRunNode.fromJson(Map<String, dynamic> json) {
+  PipelineRunNode.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     displayName = json['displayName'];
@@ -49,7 +49,7 @@ class PipelineRunNode {
     };
   }
 
-  static List<PipelineRunNode> listFromJson(List<dynamic> json) {
+  static List<PipelineRunNode> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineRunNode>[] : json.map((value) => new PipelineRunNode.fromJson(value)).toList();
   }
 

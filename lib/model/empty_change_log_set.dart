@@ -12,7 +12,7 @@ class EmptyChangeLogSet {
     return 'EmptyChangeLogSet[class_=$class_, kind=$kind, ]';
   }
 
-  EmptyChangeLogSet.fromJson(Map<String, dynamic> json) {
+  EmptyChangeLogSet.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     kind = json['kind'];
@@ -25,7 +25,7 @@ class EmptyChangeLogSet {
     };
   }
 
-  static List<EmptyChangeLogSet> listFromJson(List<dynamic> json) {
+  static List<EmptyChangeLogSet> listFromJson(List<dynamic>? json) {
     return json == null ? <EmptyChangeLogSet>[] : json.map((value) => new EmptyChangeLogSet.fromJson(value)).toList();
   }
 

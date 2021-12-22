@@ -10,7 +10,7 @@ class Label1 {
     return 'Label1[class_=$class_, ]';
   }
 
-  Label1.fromJson(Map<String, dynamic> json) {
+  Label1.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
   }
@@ -21,7 +21,7 @@ class Label1 {
     };
   }
 
-  static List<Label1> listFromJson(List<dynamic> json) {
+  static List<Label1> listFromJson(List<dynamic>? json) {
     return json == null ? <Label1>[] : json.map((value) => new Label1.fromJson(value)).toList();
   }
 

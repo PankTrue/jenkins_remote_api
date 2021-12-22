@@ -10,7 +10,7 @@ class FreeStyleProjectactions {
     return 'FreeStyleProjectactions[class_=$class_, ]';
   }
 
-  FreeStyleProjectactions.fromJson(Map<String, dynamic> json) {
+  FreeStyleProjectactions.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
   }
@@ -21,7 +21,7 @@ class FreeStyleProjectactions {
     };
   }
 
-  static List<FreeStyleProjectactions> listFromJson(List<dynamic> json) {
+  static List<FreeStyleProjectactions> listFromJson(List<dynamic>? json) {
     return json == null ? <FreeStyleProjectactions>[] : json.map((value) => new FreeStyleProjectactions.fromJson(value)).toList();
   }
 

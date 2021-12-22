@@ -22,7 +22,7 @@ class HudsonMasterComputermonitorData {
     return 'HudsonMasterComputermonitorData[hudsonNodeMonitorsSwapSpaceMonitor=$hudsonNodeMonitorsSwapSpaceMonitor, hudsonNodeMonitorsTemporarySpaceMonitor=$hudsonNodeMonitorsTemporarySpaceMonitor, hudsonNodeMonitorsDiskSpaceMonitor=$hudsonNodeMonitorsDiskSpaceMonitor, hudsonNodeMonitorsArchitectureMonitor=$hudsonNodeMonitorsArchitectureMonitor, hudsonNodeMonitorsResponseTimeMonitor=$hudsonNodeMonitorsResponseTimeMonitor, hudsonNodeMonitorsClockMonitor=$hudsonNodeMonitorsClockMonitor, class_=$class_, ]';
   }
 
-  HudsonMasterComputermonitorData.fromJson(Map<String, dynamic> json) {
+  HudsonMasterComputermonitorData.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     hudsonNodeMonitorsSwapSpaceMonitor = new SwapSpaceMonitorMemoryUsage2.fromJson(json['hudson.node_monitors.SwapSpaceMonitor']);
     hudsonNodeMonitorsTemporarySpaceMonitor = new DiskSpaceMonitorDescriptorDiskSpace.fromJson(json['hudson.node_monitors.TemporarySpaceMonitor']);
@@ -45,7 +45,7 @@ class HudsonMasterComputermonitorData {
     };
   }
 
-  static List<HudsonMasterComputermonitorData> listFromJson(List<dynamic> json) {
+  static List<HudsonMasterComputermonitorData> listFromJson(List<dynamic>? json) {
     return json == null ? <HudsonMasterComputermonitorData>[] : json.map((value) => new HudsonMasterComputermonitorData.fromJson(value)).toList();
   }
 

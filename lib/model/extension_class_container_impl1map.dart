@@ -14,7 +14,7 @@ class ExtensionClassContainerImpl1map {
     return 'ExtensionClassContainerImpl1map[ioJenkinsBlueoceanServiceEmbeddedRestPipelineImpl=$ioJenkinsBlueoceanServiceEmbeddedRestPipelineImpl, ioJenkinsBlueoceanServiceEmbeddedRestMultiBranchPipelineImpl=$ioJenkinsBlueoceanServiceEmbeddedRestMultiBranchPipelineImpl, class_=$class_, ]';
   }
 
-  ExtensionClassContainerImpl1map.fromJson(Map<String, dynamic> json) {
+  ExtensionClassContainerImpl1map.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     ioJenkinsBlueoceanServiceEmbeddedRestPipelineImpl = new ExtensionClassImpl.fromJson(json['io.jenkins.blueocean.service.embedded.rest.PipelineImpl']);
     ioJenkinsBlueoceanServiceEmbeddedRestMultiBranchPipelineImpl = new ExtensionClassImpl.fromJson(json['io.jenkins.blueocean.service.embedded.rest.MultiBranchPipelineImpl']);
@@ -29,7 +29,7 @@ class ExtensionClassContainerImpl1map {
     };
   }
 
-  static List<ExtensionClassContainerImpl1map> listFromJson(List<dynamic> json) {
+  static List<ExtensionClassContainerImpl1map> listFromJson(List<dynamic>? json) {
     return json == null ? <ExtensionClassContainerImpl1map>[] : json.map((value) => new ExtensionClassContainerImpl1map.fromJson(value)).toList();
   }
 

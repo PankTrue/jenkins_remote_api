@@ -24,7 +24,7 @@ class Pipeline {
     return 'Pipeline[class_=$class_, organization=$organization, name=$name, displayName=$displayName, fullName=$fullName, weatherScore=$weatherScore, estimatedDurationInMillis=$estimatedDurationInMillis, latestRun=$latestRun, ]';
   }
 
-  Pipeline.fromJson(Map<String, dynamic> json) {
+  Pipeline.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     organization = json['organization'];
@@ -49,7 +49,7 @@ class Pipeline {
     };
   }
 
-  static List<Pipeline> listFromJson(List<dynamic> json) {
+  static List<Pipeline> listFromJson(List<dynamic>? json) {
     return json == null ? <Pipeline>[] : json.map((value) => new Pipeline.fromJson(value)).toList();
   }
 

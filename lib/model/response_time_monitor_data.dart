@@ -14,7 +14,7 @@ class ResponseTimeMonitorData {
     return 'ResponseTimeMonitorData[class_=$class_, timestamp=$timestamp, average=$average, ]';
   }
 
-  ResponseTimeMonitorData.fromJson(Map<String, dynamic> json) {
+  ResponseTimeMonitorData.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     timestamp = json['timestamp'];
@@ -29,7 +29,7 @@ class ResponseTimeMonitorData {
     };
   }
 
-  static List<ResponseTimeMonitorData> listFromJson(List<dynamic> json) {
+  static List<ResponseTimeMonitorData> listFromJson(List<dynamic>? json) {
     return json == null ? <ResponseTimeMonitorData>[] : json.map((value) => new ResponseTimeMonitorData.fromJson(value)).toList();
   }
 

@@ -18,7 +18,7 @@ class BranchImpllinks {
     return 'BranchImpllinks[self=$self, actions=$actions, runs=$runs, queue=$queue, class_=$class_, ]';
   }
 
-  BranchImpllinks.fromJson(Map<String, dynamic> json) {
+  BranchImpllinks.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     actions = new Link.fromJson(json['actions']);
@@ -37,7 +37,7 @@ class BranchImpllinks {
     };
   }
 
-  static List<BranchImpllinks> listFromJson(List<dynamic> json) {
+  static List<BranchImpllinks> listFromJson(List<dynamic>? json) {
     return json == null ? <BranchImpllinks>[] : json.map((value) => new BranchImpllinks.fromJson(value)).toList();
   }
 

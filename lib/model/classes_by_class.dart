@@ -12,7 +12,7 @@ class ClassesByClass {
     return 'ClassesByClass[classes=$classes, class_=$class_, ]';
   }
 
-  ClassesByClass.fromJson(Map<String, dynamic> json) {
+  ClassesByClass.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     classes = (json['classes'] as List).map((item) => item as String).toList();
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class ClassesByClass {
     };
   }
 
-  static List<ClassesByClass> listFromJson(List<dynamic> json) {
+  static List<ClassesByClass> listFromJson(List<dynamic>? json) {
     return json == null ? <ClassesByClass>[] : json.map((value) => new ClassesByClass.fromJson(value)).toList();
   }
 

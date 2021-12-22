@@ -10,7 +10,7 @@ class Body {
     return 'Body[favorite=$favorite, ]';
   }
 
-  Body.fromJson(Map<String, dynamic> json) {
+  Body.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     favorite = json['favorite'];
   }
@@ -21,7 +21,7 @@ class Body {
     };
   }
 
-  static List<Body> listFromJson(List<dynamic> json) {
+  static List<Body> listFromJson(List<dynamic>? json) {
     return json == null ? <Body>[] : json.map((value) => new Body.fromJson(value)).toList();
   }
 

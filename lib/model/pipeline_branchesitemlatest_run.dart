@@ -36,7 +36,7 @@ class PipelineBranchesitemlatestRun {
     return 'PipelineBranchesitemlatestRun[durationInMillis=$durationInMillis, estimatedDurationInMillis=$estimatedDurationInMillis, enQueueTime=$enQueueTime, endTime=$endTime, id=$id, organization=$organization, pipeline=$pipeline, result=$result, runSummary=$runSummary, startTime=$startTime, state=$state, type=$type, commitId=$commitId, class_=$class_, ]';
   }
 
-  PipelineBranchesitemlatestRun.fromJson(Map<String, dynamic> json) {
+  PipelineBranchesitemlatestRun.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     durationInMillis = json['durationInMillis'];
     estimatedDurationInMillis = json['estimatedDurationInMillis'];
@@ -73,7 +73,7 @@ class PipelineBranchesitemlatestRun {
     };
   }
 
-  static List<PipelineBranchesitemlatestRun> listFromJson(List<dynamic> json) {
+  static List<PipelineBranchesitemlatestRun> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineBranchesitemlatestRun>[] : json.map((value) => new PipelineBranchesitemlatestRun.fromJson(value)).toList();
   }
 

@@ -18,7 +18,7 @@ class GithubRepositorypermissions {
     return 'GithubRepositorypermissions[admin=$admin, push=$push, pull=$pull, class_=$class_, ]';
   }
 
-  GithubRepositorypermissions.fromJson(Map<String, dynamic> json) {
+  GithubRepositorypermissions.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     admin = json['admin'];
     push = json['push'];
@@ -35,7 +35,7 @@ class GithubRepositorypermissions {
     };
   }
 
-  static List<GithubRepositorypermissions> listFromJson(List<dynamic> json) {
+  static List<GithubRepositorypermissions> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubRepositorypermissions>[] : json.map((value) => new GithubRepositorypermissions.fromJson(value)).toList();
   }
 

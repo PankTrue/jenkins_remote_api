@@ -34,7 +34,7 @@ class QueueLeftItem {
     return 'QueueLeftItem[class_=$class_, actions=$actions, blocked=$blocked, buildable=$buildable, id=$id, inQueueSince=$inQueueSince, params=$params, stuck=$stuck, task=$task, url=$url, why=$why, cancelled=$cancelled, executable=$executable, ]';
   }
 
-  QueueLeftItem.fromJson(Map<String, dynamic> json) {
+  QueueLeftItem.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     actions = CauseAction.listFromJson(json['actions']);
@@ -69,7 +69,7 @@ class QueueLeftItem {
     };
   }
 
-  static List<QueueLeftItem> listFromJson(List<dynamic> json) {
+  static List<QueueLeftItem> listFromJson(List<dynamic>? json) {
     return json == null ? <QueueLeftItem>[] : json.map((value) => new QueueLeftItem.fromJson(value)).toList();
   }
 

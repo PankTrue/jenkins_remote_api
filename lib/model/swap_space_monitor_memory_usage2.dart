@@ -18,8 +18,8 @@ class SwapSpaceMonitorMemoryUsage2 {
     return 'SwapSpaceMonitorMemoryUsage2[class_=$class_, availablePhysicalMemory=$availablePhysicalMemory, availableSwapSpace=$availableSwapSpace, totalPhysicalMemory=$totalPhysicalMemory, totalSwapSpace=$totalSwapSpace, ]';
   }
 
-  SwapSpaceMonitorMemoryUsage2.fromJson(Map<String, dynamic> json) {
-    if (json == null) return;
+  SwapSpaceMonitorMemoryUsage2.fromJson(Map<String, dynamic>? json) {
+    if (json == null || json.isEmpty) return;
     class_ = json['_class'];
     availablePhysicalMemory = json['availablePhysicalMemory'];
     availableSwapSpace = json['availableSwapSpace'];
@@ -37,7 +37,7 @@ class SwapSpaceMonitorMemoryUsage2 {
     };
   }
 
-  static List<SwapSpaceMonitorMemoryUsage2> listFromJson(List<dynamic> json) {
+  static List<SwapSpaceMonitorMemoryUsage2> listFromJson(List<dynamic>? json) {
     return json == null ? <SwapSpaceMonitorMemoryUsage2>[] : json.map((value) => new SwapSpaceMonitorMemoryUsage2.fromJson(value)).toList();
   }
 

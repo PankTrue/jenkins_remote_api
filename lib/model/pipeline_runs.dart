@@ -8,7 +8,7 @@ class PipelineRuns {
     return 'PipelineRuns[]';
   }
 
-  PipelineRuns.fromJson(Map<String, dynamic> json) {
+  PipelineRuns.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
   }
 
@@ -17,7 +17,7 @@ class PipelineRuns {
     };
   }
 
-  static List<PipelineRuns> listFromJson(List<dynamic> json) {
+  static List<PipelineRuns> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineRuns>[] : json.map((value) => new PipelineRuns.fromJson(value)).toList();
   }
 

@@ -40,7 +40,7 @@ class HudsonMasterComputer {
     return 'HudsonMasterComputer[class_=$class_, displayName=$displayName, executors=$executors, icon=$icon, iconClassName=$iconClassName, idle=$idle, jnlpAgent=$jnlpAgent, launchSupported=$launchSupported, loadStatistics=$loadStatistics, manualLaunchAllowed=$manualLaunchAllowed, monitorData=$monitorData, numExecutors=$numExecutors, offline=$offline, offlineCause=$offlineCause, offlineCauseReason=$offlineCauseReason, temporarilyOffline=$temporarilyOffline, ]';
   }
 
-  HudsonMasterComputer.fromJson(Map<String, dynamic> json) {
+  HudsonMasterComputer.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     displayName = json['displayName'];
@@ -55,7 +55,7 @@ class HudsonMasterComputer {
     monitorData = new HudsonMasterComputermonitorData.fromJson(json['monitorData']);
     numExecutors = json['numExecutors'];
     offline = json['offline'];
-    offlineCause = json['offlineCause'];
+    offlineCause = json['offlineCause'].toString(); //TODO Implement model for hudson.slaves.OfflineCause$LaunchFailed
     offlineCauseReason = json['offlineCauseReason'];
     temporarilyOffline = json['temporarilyOffline'];
   }
@@ -81,7 +81,7 @@ class HudsonMasterComputer {
     };
   }
 
-  static List<HudsonMasterComputer> listFromJson(List<dynamic> json) {
+  static List<HudsonMasterComputer> listFromJson(List<dynamic>? json) {
     return json == null ? <HudsonMasterComputer>[] : json.map((value) => new HudsonMasterComputer.fromJson(value)).toList();
   }
 

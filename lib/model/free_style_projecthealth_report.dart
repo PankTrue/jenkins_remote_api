@@ -18,7 +18,7 @@ class FreeStyleProjecthealthReport {
     return 'FreeStyleProjecthealthReport[description=$description, iconClassName=$iconClassName, iconUrl=$iconUrl, score=$score, class_=$class_, ]';
   }
 
-  FreeStyleProjecthealthReport.fromJson(Map<String, dynamic> json) {
+  FreeStyleProjecthealthReport.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     description = json['description'];
     iconClassName = json['iconClassName'];
@@ -37,7 +37,7 @@ class FreeStyleProjecthealthReport {
     };
   }
 
-  static List<FreeStyleProjecthealthReport> listFromJson(List<dynamic> json) {
+  static List<FreeStyleProjecthealthReport> listFromJson(List<dynamic>? json) {
     return json == null ? <FreeStyleProjecthealthReport>[] : json.map((value) => new FreeStyleProjecthealthReport.fromJson(value)).toList();
   }
 

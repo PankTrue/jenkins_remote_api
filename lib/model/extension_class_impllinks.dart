@@ -12,7 +12,7 @@ class ExtensionClassImpllinks {
     return 'ExtensionClassImpllinks[self=$self, class_=$class_, ]';
   }
 
-  ExtensionClassImpllinks.fromJson(Map<String, dynamic> json) {
+  ExtensionClassImpllinks.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class ExtensionClassImpllinks {
     };
   }
 
-  static List<ExtensionClassImpllinks> listFromJson(List<dynamic> json) {
+  static List<ExtensionClassImpllinks> listFromJson(List<dynamic>? json) {
     return json == null ? <ExtensionClassImpllinks>[] : json.map((value) => new ExtensionClassImpllinks.fromJson(value)).toList();
   }
 

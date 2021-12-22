@@ -18,7 +18,7 @@ class GithubScm {
     return 'GithubScm[class_=$class_, links=$links, credentialId=$credentialId, id=$id, uri=$uri, ]';
   }
 
-  GithubScm.fromJson(Map<String, dynamic> json) {
+  GithubScm.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     links = new GithubScmlinks.fromJson(json['_links']);
@@ -37,7 +37,7 @@ class GithubScm {
     };
   }
 
-  static List<GithubScm> listFromJson(List<dynamic> json) {
+  static List<GithubScm> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubScm>[] : json.map((value) => new GithubScm.fromJson(value)).toList();
   }
 

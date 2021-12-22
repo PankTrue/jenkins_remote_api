@@ -14,7 +14,7 @@ class AllView {
     return 'AllView[class_=$class_, name=$name, url=$url, ]';
   }
 
-  AllView.fromJson(Map<String, dynamic> json) {
+  AllView.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     name = json['name'];
@@ -29,7 +29,7 @@ class AllView {
     };
   }
 
-  static List<AllView> listFromJson(List<dynamic> json) {
+  static List<AllView> listFromJson(List<dynamic>? json) {
     return json == null ? <AllView>[] : json.map((value) => new AllView.fromJson(value)).toList();
   }
 

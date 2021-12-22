@@ -34,7 +34,7 @@ class BranchImpl {
     return 'BranchImpl[class_=$class_, displayName=$displayName, estimatedDurationInMillis=$estimatedDurationInMillis, fullDisplayName=$fullDisplayName, fullName=$fullName, name=$name, organization=$organization, parameters=$parameters, permissions=$permissions, weatherScore=$weatherScore, pullRequest=$pullRequest, links=$links, latestRun=$latestRun, ]';
   }
 
-  BranchImpl.fromJson(Map<String, dynamic> json) {
+  BranchImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     displayName = json['displayName'];
@@ -69,7 +69,7 @@ class BranchImpl {
     };
   }
 
-  static List<BranchImpl> listFromJson(List<dynamic> json) {
+  static List<BranchImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <BranchImpl>[] : json.map((value) => new BranchImpl.fromJson(value)).toList();
   }
 

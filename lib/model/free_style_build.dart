@@ -44,7 +44,7 @@ class FreeStyleBuild {
     return 'FreeStyleBuild[class_=$class_, number=$number, url=$url, actions=$actions, building=$building, description=$description, displayName=$displayName, duration=$duration, estimatedDuration=$estimatedDuration, executor=$executor, fullDisplayName=$fullDisplayName, id=$id, keepLog=$keepLog, queueId=$queueId, result=$result, timestamp=$timestamp, builtOn=$builtOn, changeSet=$changeSet, ]';
   }
 
-  FreeStyleBuild.fromJson(Map<String, dynamic> json) {
+  FreeStyleBuild.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     number = json['number'];
@@ -89,7 +89,7 @@ class FreeStyleBuild {
     };
   }
 
-  static List<FreeStyleBuild> listFromJson(List<dynamic> json) {
+  static List<FreeStyleBuild> listFromJson(List<dynamic>? json) {
     return json == null ? <FreeStyleBuild>[] : json.map((value) => new FreeStyleBuild.fromJson(value)).toList();
   }
 

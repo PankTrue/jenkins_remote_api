@@ -12,7 +12,7 @@ class GithubFile {
     return 'GithubFile[content=$content, class_=$class_, ]';
   }
 
-  GithubFile.fromJson(Map<String, dynamic> json) {
+  GithubFile.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     content = new GithubContent.fromJson(json['content']);
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class GithubFile {
     };
   }
 
-  static List<GithubFile> listFromJson(List<dynamic> json) {
+  static List<GithubFile> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubFile>[] : json.map((value) => new GithubFile.fromJson(value)).toList();
   }
 

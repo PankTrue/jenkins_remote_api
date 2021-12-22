@@ -8,7 +8,7 @@ class UserFavorites {
     return 'UserFavorites[]';
   }
 
-  UserFavorites.fromJson(Map<String, dynamic> json) {
+  UserFavorites.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
   }
 
@@ -17,7 +17,7 @@ class UserFavorites {
     };
   }
 
-  static List<UserFavorites> listFromJson(List<dynamic> json) {
+  static List<UserFavorites> listFromJson(List<dynamic>? json) {
     return json == null ? <UserFavorites>[] : json.map((value) => new UserFavorites.fromJson(value)).toList();
   }
 

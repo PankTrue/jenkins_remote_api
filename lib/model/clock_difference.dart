@@ -12,7 +12,7 @@ class ClockDifference {
     return 'ClockDifference[class_=$class_, diff=$diff, ]';
   }
 
-  ClockDifference.fromJson(Map<String, dynamic> json) {
+  ClockDifference.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     diff = json['diff'];
@@ -25,7 +25,7 @@ class ClockDifference {
     };
   }
 
-  static List<ClockDifference> listFromJson(List<dynamic> json) {
+  static List<ClockDifference> listFromJson(List<dynamic>? json) {
     return json == null ? <ClockDifference>[] : json.map((value) => new ClockDifference.fromJson(value)).toList();
   }
 

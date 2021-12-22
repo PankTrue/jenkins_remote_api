@@ -12,7 +12,7 @@ class ExtensionClassContainerImpl1links {
     return 'ExtensionClassContainerImpl1links[self=$self, class_=$class_, ]';
   }
 
-  ExtensionClassContainerImpl1links.fromJson(Map<String, dynamic> json) {
+  ExtensionClassContainerImpl1links.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class ExtensionClassContainerImpl1links {
     };
   }
 
-  static List<ExtensionClassContainerImpl1links> listFromJson(List<dynamic> json) {
+  static List<ExtensionClassContainerImpl1links> listFromJson(List<dynamic>? json) {
     return json == null ? <ExtensionClassContainerImpl1links>[] : json.map((value) => new ExtensionClassContainerImpl1links.fromJson(value)).toList();
   }
 

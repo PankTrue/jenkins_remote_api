@@ -18,7 +18,7 @@ class ComputerSet {
     return 'ComputerSet[class_=$class_, busyExecutors=$busyExecutors, computer=$computer, displayName=$displayName, totalExecutors=$totalExecutors, ]';
   }
 
-  ComputerSet.fromJson(Map<String, dynamic> json) {
+  ComputerSet.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     busyExecutors = json['busyExecutors'];
@@ -37,7 +37,7 @@ class ComputerSet {
     };
   }
 
-  static List<ComputerSet> listFromJson(List<dynamic> json) {
+  static List<ComputerSet> listFromJson(List<dynamic>? json) {
     return json == null ? <ComputerSet>[] : json.map((value) => new ComputerSet.fromJson(value)).toList();
   }
 

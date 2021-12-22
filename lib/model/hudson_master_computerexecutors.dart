@@ -20,7 +20,7 @@ class HudsonMasterComputerexecutors {
     return 'HudsonMasterComputerexecutors[currentExecutable=$currentExecutable, idle=$idle, likelyStuck=$likelyStuck, number=$number, progress=$progress, class_=$class_, ]';
   }
 
-  HudsonMasterComputerexecutors.fromJson(Map<String, dynamic> json) {
+  HudsonMasterComputerexecutors.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     currentExecutable = new FreeStyleBuild.fromJson(json['currentExecutable']);
     idle = json['idle'];
@@ -41,7 +41,7 @@ class HudsonMasterComputerexecutors {
     };
   }
 
-  static List<HudsonMasterComputerexecutors> listFromJson(List<dynamic> json) {
+  static List<HudsonMasterComputerexecutors> listFromJson(List<dynamic>? json) {
     return json == null ? <HudsonMasterComputerexecutors>[] : json.map((value) => new HudsonMasterComputerexecutors.fromJson(value)).toList();
   }
 

@@ -36,7 +36,7 @@ class MultibranchPipeline {
     return 'MultibranchPipeline[displayName=$displayName, estimatedDurationInMillis=$estimatedDurationInMillis, latestRun=$latestRun, name=$name, organization=$organization, weatherScore=$weatherScore, branchNames=$branchNames, numberOfFailingBranches=$numberOfFailingBranches, numberOfFailingPullRequests=$numberOfFailingPullRequests, numberOfSuccessfulBranches=$numberOfSuccessfulBranches, numberOfSuccessfulPullRequests=$numberOfSuccessfulPullRequests, totalNumberOfBranches=$totalNumberOfBranches, totalNumberOfPullRequests=$totalNumberOfPullRequests, class_=$class_, ]';
   }
 
-  MultibranchPipeline.fromJson(Map<String, dynamic> json) {
+  MultibranchPipeline.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     displayName = json['displayName'];
     estimatedDurationInMillis = json['estimatedDurationInMillis'];
@@ -73,7 +73,7 @@ class MultibranchPipeline {
     };
   }
 
-  static List<MultibranchPipeline> listFromJson(List<dynamic> json) {
+  static List<MultibranchPipeline> listFromJson(List<dynamic>? json) {
     return json == null ? <MultibranchPipeline>[] : json.map((value) => new MultibranchPipeline.fromJson(value)).toList();
   }
 

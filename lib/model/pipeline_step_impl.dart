@@ -26,7 +26,7 @@ class PipelineStepImpl {
     return 'PipelineStepImpl[class_=$class_, links=$links, displayName=$displayName, durationInMillis=$durationInMillis, id=$id, input=$input, result=$result, startTime=$startTime, state=$state, ]';
   }
 
-  PipelineStepImpl.fromJson(Map<String, dynamic> json) {
+  PipelineStepImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     links = new PipelineStepImpllinks.fromJson(json['_links']);
@@ -53,7 +53,7 @@ class PipelineStepImpl {
     };
   }
 
-  static List<PipelineStepImpl> listFromJson(List<dynamic> json) {
+  static List<PipelineStepImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineStepImpl>[] : json.map((value) => new PipelineStepImpl.fromJson(value)).toList();
   }
 

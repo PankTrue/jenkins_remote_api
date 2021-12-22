@@ -22,7 +22,7 @@ class InputStepImpl {
     return 'InputStepImpl[class_=$class_, links=$links, id=$id, message=$message, ok=$ok, parameters=$parameters, submitter=$submitter, ]';
   }
 
-  InputStepImpl.fromJson(Map<String, dynamic> json) {
+  InputStepImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     links = new InputStepImpllinks.fromJson(json['_links']);
@@ -45,7 +45,7 @@ class InputStepImpl {
     };
   }
 
-  static List<InputStepImpl> listFromJson(List<dynamic> json) {
+  static List<InputStepImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <InputStepImpl>[] : json.map((value) => new InputStepImpl.fromJson(value)).toList();
   }
 

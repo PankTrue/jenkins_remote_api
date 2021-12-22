@@ -10,7 +10,7 @@ class UnlabeledLoadStatistics {
     return 'UnlabeledLoadStatistics[class_=$class_, ]';
   }
 
-  UnlabeledLoadStatistics.fromJson(Map<String, dynamic> json) {
+  UnlabeledLoadStatistics.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
   }
@@ -21,7 +21,7 @@ class UnlabeledLoadStatistics {
     };
   }
 
-  static List<UnlabeledLoadStatistics> listFromJson(List<dynamic> json) {
+  static List<UnlabeledLoadStatistics> listFromJson(List<dynamic>? json) {
     return json == null ? <UnlabeledLoadStatistics>[] : json.map((value) => new UnlabeledLoadStatistics.fromJson(value)).toList();
   }
 

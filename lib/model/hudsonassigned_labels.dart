@@ -10,7 +10,7 @@ class HudsonassignedLabels {
     return 'HudsonassignedLabels[class_=$class_, ]';
   }
 
-  HudsonassignedLabels.fromJson(Map<String, dynamic> json) {
+  HudsonassignedLabels.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
   }
@@ -21,7 +21,7 @@ class HudsonassignedLabels {
     };
   }
 
-  static List<HudsonassignedLabels> listFromJson(List<dynamic> json) {
+  static List<HudsonassignedLabels> listFromJson(List<dynamic>? json) {
     return json == null ? <HudsonassignedLabels>[] : json.map((value) => new HudsonassignedLabels.fromJson(value)).toList();
   }
 

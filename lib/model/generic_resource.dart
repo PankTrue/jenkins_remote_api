@@ -20,7 +20,7 @@ class GenericResource {
     return 'GenericResource[class_=$class_, displayName=$displayName, durationInMillis=$durationInMillis, id=$id, result=$result, startTime=$startTime, ]';
   }
 
-  GenericResource.fromJson(Map<String, dynamic> json) {
+  GenericResource.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     displayName = json['displayName'];
@@ -41,7 +41,7 @@ class GenericResource {
     };
   }
 
-  static List<GenericResource> listFromJson(List<dynamic> json) {
+  static List<GenericResource> listFromJson(List<dynamic>? json) {
     return json == null ? <GenericResource>[] : json.map((value) => new GenericResource.fromJson(value)).toList();
   }
 

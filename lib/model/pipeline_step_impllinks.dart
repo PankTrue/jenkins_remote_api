@@ -14,7 +14,7 @@ class PipelineStepImpllinks {
     return 'PipelineStepImpllinks[self=$self, actions=$actions, class_=$class_, ]';
   }
 
-  PipelineStepImpllinks.fromJson(Map<String, dynamic> json) {
+  PipelineStepImpllinks.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     actions = new Link.fromJson(json['actions']);
@@ -29,7 +29,7 @@ class PipelineStepImpllinks {
     };
   }
 
-  static List<PipelineStepImpllinks> listFromJson(List<dynamic> json) {
+  static List<PipelineStepImpllinks> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineStepImpllinks>[] : json.map((value) => new PipelineStepImpllinks.fromJson(value)).toList();
   }
 

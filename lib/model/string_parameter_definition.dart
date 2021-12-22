@@ -18,7 +18,7 @@ class StringParameterDefinition {
     return 'StringParameterDefinition[class_=$class_, defaultParameterValue=$defaultParameterValue, description=$description, name=$name, type=$type, ]';
   }
 
-  StringParameterDefinition.fromJson(Map<String, dynamic> json) {
+  StringParameterDefinition.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     defaultParameterValue = new StringParameterValue.fromJson(json['defaultParameterValue']);
@@ -37,7 +37,7 @@ class StringParameterDefinition {
     };
   }
 
-  static List<StringParameterDefinition> listFromJson(List<dynamic> json) {
+  static List<StringParameterDefinition> listFromJson(List<dynamic>? json) {
     return json == null ? <StringParameterDefinition>[] : json.map((value) => new StringParameterDefinition.fromJson(value)).toList();
   }
 

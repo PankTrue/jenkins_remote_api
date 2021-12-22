@@ -16,7 +16,7 @@ class DiskSpaceMonitorDescriptorDiskSpace {
     return 'DiskSpaceMonitorDescriptorDiskSpace[class_=$class_, timestamp=$timestamp, path=$path, size=$size, ]';
   }
 
-  DiskSpaceMonitorDescriptorDiskSpace.fromJson(Map<String, dynamic> json) {
+  DiskSpaceMonitorDescriptorDiskSpace.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     timestamp = json['timestamp'];
@@ -33,7 +33,7 @@ class DiskSpaceMonitorDescriptorDiskSpace {
     };
   }
 
-  static List<DiskSpaceMonitorDescriptorDiskSpace> listFromJson(List<dynamic> json) {
+  static List<DiskSpaceMonitorDescriptorDiskSpace> listFromJson(List<dynamic>? json) {
     return json == null ? <DiskSpaceMonitorDescriptorDiskSpace>[] : json.map((value) => new DiskSpaceMonitorDescriptorDiskSpace.fromJson(value)).toList();
   }
 

@@ -16,7 +16,7 @@ class PipelinelatestRunartifacts {
     return 'PipelinelatestRunartifacts[name=$name, size=$size, url=$url, class_=$class_, ]';
   }
 
-  PipelinelatestRunartifacts.fromJson(Map<String, dynamic> json) {
+  PipelinelatestRunartifacts.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     name = json['name'];
     size = json['size'];
@@ -33,7 +33,7 @@ class PipelinelatestRunartifacts {
     };
   }
 
-  static List<PipelinelatestRunartifacts> listFromJson(List<dynamic> json) {
+  static List<PipelinelatestRunartifacts> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelinelatestRunartifacts>[] : json.map((value) => new PipelinelatestRunartifacts.fromJson(value)).toList();
   }
 

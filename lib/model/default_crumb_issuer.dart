@@ -14,7 +14,7 @@ class DefaultCrumbIssuer {
     return 'DefaultCrumbIssuer[class_=$class_, crumb=$crumb, crumbRequestField=$crumbRequestField, ]';
   }
 
-  DefaultCrumbIssuer.fromJson(Map<String, dynamic> json) {
+  DefaultCrumbIssuer.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     crumb = json['crumb'];
@@ -29,7 +29,7 @@ class DefaultCrumbIssuer {
     };
   }
 
-  static List<DefaultCrumbIssuer> listFromJson(List<dynamic> json) {
+  static List<DefaultCrumbIssuer> listFromJson(List<dynamic>? json) {
     return json == null ? <DefaultCrumbIssuer>[] : json.map((value) => new DefaultCrumbIssuer.fromJson(value)).toList();
   }
 

@@ -22,7 +22,7 @@ class PipelineFolderImpl {
     return 'PipelineFolderImpl[class_=$class_, displayName=$displayName, fullName=$fullName, name=$name, organization=$organization, numberOfFolders=$numberOfFolders, numberOfPipelines=$numberOfPipelines, ]';
   }
 
-  PipelineFolderImpl.fromJson(Map<String, dynamic> json) {
+  PipelineFolderImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     displayName = json['displayName'];
@@ -45,7 +45,7 @@ class PipelineFolderImpl {
     };
   }
 
-  static List<PipelineFolderImpl> listFromJson(List<dynamic> json) {
+  static List<PipelineFolderImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineFolderImpl>[] : json.map((value) => new PipelineFolderImpl.fromJson(value)).toList();
   }
 

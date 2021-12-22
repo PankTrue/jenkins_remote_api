@@ -18,7 +18,7 @@ class BranchImplpermissions {
     return 'BranchImplpermissions[create=$create, read=$read, start=$start, stop=$stop, class_=$class_, ]';
   }
 
-  BranchImplpermissions.fromJson(Map<String, dynamic> json) {
+  BranchImplpermissions.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     create = json['create'];
     read = json['read'];
@@ -37,7 +37,7 @@ class BranchImplpermissions {
     };
   }
 
-  static List<BranchImplpermissions> listFromJson(List<dynamic> json) {
+  static List<BranchImplpermissions> listFromJson(List<dynamic>? json) {
     return json == null ? <BranchImplpermissions>[] : json.map((value) => new BranchImplpermissions.fromJson(value)).toList();
   }
 

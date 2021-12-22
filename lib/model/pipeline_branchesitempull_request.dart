@@ -20,7 +20,7 @@ class PipelineBranchesitempullRequest {
     return 'PipelineBranchesitempullRequest[links=$links, author=$author, id=$id, title=$title, url=$url, class_=$class_, ]';
   }
 
-  PipelineBranchesitempullRequest.fromJson(Map<String, dynamic> json) {
+  PipelineBranchesitempullRequest.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     links = new PipelineBranchesitempullRequestlinks.fromJson(json['_links']);
     author = json['author'];
@@ -41,7 +41,7 @@ class PipelineBranchesitempullRequest {
     };
   }
 
-  static List<PipelineBranchesitempullRequest> listFromJson(List<dynamic> json) {
+  static List<PipelineBranchesitempullRequest> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineBranchesitempullRequest>[] : json.map((value) => new PipelineBranchesitempullRequest.fromJson(value)).toList();
   }
 

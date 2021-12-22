@@ -8,7 +8,7 @@ class Users {
     return 'Users[]';
   }
 
-  Users.fromJson(Map<String, dynamic> json) {
+  Users.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
   }
 
@@ -17,7 +17,7 @@ class Users {
     };
   }
 
-  static List<Users> listFromJson(List<dynamic> json) {
+  static List<Users> listFromJson(List<dynamic>? json) {
     return json == null ? <Users>[] : json.map((value) => new Users.fromJson(value)).toList();
   }
 

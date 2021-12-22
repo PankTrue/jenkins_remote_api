@@ -18,7 +18,7 @@ class QueueItemImpl {
     return 'QueueItemImpl[class_=$class_, expectedBuildNumber=$expectedBuildNumber, id=$id, pipeline=$pipeline, queuedTime=$queuedTime, ]';
   }
 
-  QueueItemImpl.fromJson(Map<String, dynamic> json) {
+  QueueItemImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     expectedBuildNumber = json['expectedBuildNumber'];
@@ -37,7 +37,7 @@ class QueueItemImpl {
     };
   }
 
-  static List<QueueItemImpl> listFromJson(List<dynamic> json) {
+  static List<QueueItemImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <QueueItemImpl>[] : json.map((value) => new QueueItemImpl.fromJson(value)).toList();
   }
 

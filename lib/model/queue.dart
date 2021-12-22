@@ -12,7 +12,7 @@ class Queue {
     return 'Queue[class_=$class_, items=$items, ]';
   }
 
-  Queue.fromJson(Map<String, dynamic> json) {
+  Queue.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     items = QueueBlockedItem.listFromJson(json['items']);
@@ -25,7 +25,7 @@ class Queue {
     };
   }
 
-  static List<Queue> listFromJson(List<dynamic> json) {
+  static List<Queue> listFromJson(List<dynamic>? json) {
     return json == null ? <Queue>[] : json.map((value) => new Queue.fromJson(value)).toList();
   }
 

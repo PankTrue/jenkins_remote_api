@@ -38,7 +38,7 @@ class Hudson {
     return 'Hudson[class_=$class_, assignedLabels=$assignedLabels, mode=$mode, nodeDescription=$nodeDescription, nodeName=$nodeName, numExecutors=$numExecutors, description=$description, jobs=$jobs, primaryView=$primaryView, quietingDown=$quietingDown, slaveAgentPort=$slaveAgentPort, unlabeledLoad=$unlabeledLoad, useCrumbs=$useCrumbs, useSecurity=$useSecurity, views=$views, ]';
   }
 
-  Hudson.fromJson(Map<String, dynamic> json) {
+  Hudson.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     assignedLabels = HudsonassignedLabels.listFromJson(json['assignedLabels']);
@@ -77,7 +77,7 @@ class Hudson {
     };
   }
 
-  static List<Hudson> listFromJson(List<dynamic> json) {
+  static List<Hudson> listFromJson(List<dynamic>? json) {
     return json == null ? <Hudson>[] : json.map((value) => new Hudson.fromJson(value)).toList();
   }
 

@@ -24,7 +24,7 @@ class GithubContent {
     return 'GithubContent[name=$name, sha=$sha, class_=$class_, repo=$repo, size=$size, owner=$owner, path=$path, base64Data=$base64Data, ]';
   }
 
-  GithubContent.fromJson(Map<String, dynamic> json) {
+  GithubContent.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     name = json['name'];
     sha = json['sha'];
@@ -49,7 +49,7 @@ class GithubContent {
     };
   }
 
-  static List<GithubContent> listFromJson(List<dynamic> json) {
+  static List<GithubContent> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubContent>[] : json.map((value) => new GithubContent.fromJson(value)).toList();
   }
 

@@ -26,7 +26,7 @@ class PipelineBranchesitem {
     return 'PipelineBranchesitem[displayName=$displayName, estimatedDurationInMillis=$estimatedDurationInMillis, name=$name, weatherScore=$weatherScore, latestRun=$latestRun, organization=$organization, pullRequest=$pullRequest, totalNumberOfPullRequests=$totalNumberOfPullRequests, class_=$class_, ]';
   }
 
-  PipelineBranchesitem.fromJson(Map<String, dynamic> json) {
+  PipelineBranchesitem.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     displayName = json['displayName'];
     estimatedDurationInMillis = json['estimatedDurationInMillis'];
@@ -53,7 +53,7 @@ class PipelineBranchesitem {
     };
   }
 
-  static List<PipelineBranchesitem> listFromJson(List<dynamic> json) {
+  static List<PipelineBranchesitem> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineBranchesitem>[] : json.map((value) => new PipelineBranchesitem.fromJson(value)).toList();
   }
 

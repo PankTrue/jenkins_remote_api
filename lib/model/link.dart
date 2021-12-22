@@ -12,7 +12,7 @@ class Link {
     return 'Link[class_=$class_, href=$href, ]';
   }
 
-  Link.fromJson(Map<String, dynamic> json) {
+  Link.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     href = json['href'];
@@ -25,7 +25,7 @@ class Link {
     };
   }
 
-  static List<Link> listFromJson(List<dynamic> json) {
+  static List<Link> listFromJson(List<dynamic>? json) {
     return json == null ? <Link>[] : json.map((value) => new Link.fromJson(value)).toList();
   }
 

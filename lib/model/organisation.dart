@@ -12,7 +12,7 @@ class Organisation {
     return 'Organisation[class_=$class_, name=$name, ]';
   }
 
-  Organisation.fromJson(Map<String, dynamic> json) {
+  Organisation.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     name = json['name'];
@@ -25,7 +25,7 @@ class Organisation {
     };
   }
 
-  static List<Organisation> listFromJson(List<dynamic> json) {
+  static List<Organisation> listFromJson(List<dynamic>? json) {
     return json == null ? <Organisation>[] : json.map((value) => new Organisation.fromJson(value)).toList();
   }
 

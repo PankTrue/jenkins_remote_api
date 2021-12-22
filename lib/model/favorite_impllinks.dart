@@ -12,7 +12,7 @@ class FavoriteImpllinks {
     return 'FavoriteImpllinks[self=$self, class_=$class_, ]';
   }
 
-  FavoriteImpllinks.fromJson(Map<String, dynamic> json) {
+  FavoriteImpllinks.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class FavoriteImpllinks {
     };
   }
 
-  static List<FavoriteImpllinks> listFromJson(List<dynamic> json) {
+  static List<FavoriteImpllinks> listFromJson(List<dynamic>? json) {
     return json == null ? <FavoriteImpllinks>[] : json.map((value) => new FavoriteImpllinks.fromJson(value)).toList();
   }
 

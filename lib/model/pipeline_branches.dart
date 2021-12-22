@@ -8,7 +8,7 @@ class PipelineBranches {
     return 'PipelineBranches[]';
   }
 
-  PipelineBranches.fromJson(Map<String, dynamic> json) {
+  PipelineBranches.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
   }
 
@@ -17,7 +17,7 @@ class PipelineBranches {
     };
   }
 
-  static List<PipelineBranches> listFromJson(List<dynamic> json) {
+  static List<PipelineBranches> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineBranches>[] : json.map((value) => new PipelineBranches.fromJson(value)).toList();
   }
 

@@ -62,7 +62,7 @@ class FreeStyleProject {
     return 'FreeStyleProject[class_=$class_, name=$name, url=$url, color=$color, actions=$actions, description=$description, displayName=$displayName, displayNameOrNull=$displayNameOrNull, fullDisplayName=$fullDisplayName, fullName=$fullName, buildable=$buildable, builds=$builds, firstBuild=$firstBuild, healthReport=$healthReport, inQueue=$inQueue, keepDependencies=$keepDependencies, lastBuild=$lastBuild, lastCompletedBuild=$lastCompletedBuild, lastFailedBuild=$lastFailedBuild, lastStableBuild=$lastStableBuild, lastSuccessfulBuild=$lastSuccessfulBuild, lastUnstableBuild=$lastUnstableBuild, lastUnsuccessfulBuild=$lastUnsuccessfulBuild, nextBuildNumber=$nextBuildNumber, queueItem=$queueItem, concurrentBuild=$concurrentBuild, scm=$scm, ]';
   }
 
-  FreeStyleProject.fromJson(Map<String, dynamic> json) {
+  FreeStyleProject.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     name = json['name'];
@@ -125,7 +125,7 @@ class FreeStyleProject {
     };
   }
 
-  static List<FreeStyleProject> listFromJson(List<dynamic> json) {
+  static List<FreeStyleProject> listFromJson(List<dynamic>? json) {
     return json == null ? <FreeStyleProject>[] : json.map((value) => new FreeStyleProject.fromJson(value)).toList();
   }
 

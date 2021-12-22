@@ -12,7 +12,7 @@ class GithubScmlinks {
     return 'GithubScmlinks[self=$self, class_=$class_, ]';
   }
 
-  GithubScmlinks.fromJson(Map<String, dynamic> json) {
+  GithubScmlinks.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     self = new Link.fromJson(json['self']);
     class_ = json['_class'];
@@ -25,7 +25,7 @@ class GithubScmlinks {
     };
   }
 
-  static List<GithubScmlinks> listFromJson(List<dynamic> json) {
+  static List<GithubScmlinks> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubScmlinks>[] : json.map((value) => new GithubScmlinks.fromJson(value)).toList();
   }
 

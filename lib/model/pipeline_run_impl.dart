@@ -38,7 +38,7 @@ class PipelineRunImpl {
     return 'PipelineRunImpl[class_=$class_, links=$links, durationInMillis=$durationInMillis, enQueueTime=$enQueueTime, endTime=$endTime, estimatedDurationInMillis=$estimatedDurationInMillis, id=$id, organization=$organization, pipeline=$pipeline, result=$result, runSummary=$runSummary, startTime=$startTime, state=$state, type=$type, commitId=$commitId, ]';
   }
 
-  PipelineRunImpl.fromJson(Map<String, dynamic> json) {
+  PipelineRunImpl.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     links = new PipelineRunImpllinks.fromJson(json['_links']);
@@ -77,7 +77,7 @@ class PipelineRunImpl {
     };
   }
 
-  static List<PipelineRunImpl> listFromJson(List<dynamic> json) {
+  static List<PipelineRunImpl> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineRunImpl>[] : json.map((value) => new PipelineRunImpl.fromJson(value)).toList();
   }
 

@@ -18,7 +18,7 @@ class ListView {
     return 'ListView[class_=$class_, description=$description, jobs=$jobs, name=$name, url=$url, ]';
   }
 
-  ListView.fromJson(Map<String, dynamic> json) {
+  ListView.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     description = json['description'];
@@ -37,7 +37,7 @@ class ListView {
     };
   }
 
-  static List<ListView> listFromJson(List<dynamic> json) {
+  static List<ListView> listFromJson(List<dynamic>? json) {
     return json == null ? <ListView>[] : json.map((value) => new ListView.fromJson(value)).toList();
   }
 

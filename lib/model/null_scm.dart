@@ -10,7 +10,7 @@ class NullSCM {
     return 'NullSCM[class_=$class_, ]';
   }
 
-  NullSCM.fromJson(Map<String, dynamic> json) {
+  NullSCM.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
   }
@@ -21,7 +21,7 @@ class NullSCM {
     };
   }
 
-  static List<NullSCM> listFromJson(List<dynamic> json) {
+  static List<NullSCM> listFromJson(List<dynamic>? json) {
     return json == null ? <NullSCM>[] : json.map((value) => new NullSCM.fromJson(value)).toList();
   }
 

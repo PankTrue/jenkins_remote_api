@@ -38,7 +38,7 @@ class PipelineActivity {
     return 'PipelineActivity[class_=$class_, artifacts=$artifacts, durationInMillis=$durationInMillis, estimatedDurationInMillis=$estimatedDurationInMillis, enQueueTime=$enQueueTime, endTime=$endTime, id=$id, organization=$organization, pipeline=$pipeline, result=$result, runSummary=$runSummary, startTime=$startTime, state=$state, type=$type, commitId=$commitId, ]';
   }
 
-  PipelineActivity.fromJson(Map<String, dynamic> json) {
+  PipelineActivity.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     artifacts = PipelineActivityartifacts.listFromJson(json['artifacts']);
@@ -77,7 +77,7 @@ class PipelineActivity {
     };
   }
 
-  static List<PipelineActivity> listFromJson(List<dynamic> json) {
+  static List<PipelineActivity> listFromJson(List<dynamic>? json) {
     return json == null ? <PipelineActivity>[] : json.map((value) => new PipelineActivity.fromJson(value)).toList();
   }
 

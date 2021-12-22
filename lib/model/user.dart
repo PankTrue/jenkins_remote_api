@@ -18,7 +18,7 @@ class User {
     return 'User[class_=$class_, id=$id, fullName=$fullName, email=$email, name=$name, ]';
   }
 
-  User.fromJson(Map<String, dynamic> json) {
+  User.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     id = json['id'];
@@ -37,7 +37,7 @@ class User {
     };
   }
 
-  static List<User> listFromJson(List<dynamic> json) {
+  static List<User> listFromJson(List<dynamic>? json) {
     return json == null ? <User>[] : json.map((value) => new User.fromJson(value)).toList();
   }
 

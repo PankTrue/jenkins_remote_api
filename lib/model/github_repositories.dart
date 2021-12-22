@@ -20,7 +20,7 @@ class GithubRepositories {
     return 'GithubRepositories[class_=$class_, links=$links, items=$items, lastPage=$lastPage, nextPage=$nextPage, pageSize=$pageSize, ]';
   }
 
-  GithubRepositories.fromJson(Map<String, dynamic> json) {
+  GithubRepositories.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     links = new GithubRepositorieslinks.fromJson(json['_links']);
@@ -41,7 +41,7 @@ class GithubRepositories {
     };
   }
 
-  static List<GithubRepositories> listFromJson(List<dynamic> json) {
+  static List<GithubRepositories> listFromJson(List<dynamic>? json) {
     return json == null ? <GithubRepositories>[] : json.map((value) => new GithubRepositories.fromJson(value)).toList();
   }
 

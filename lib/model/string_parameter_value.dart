@@ -14,7 +14,7 @@ class StringParameterValue {
     return 'StringParameterValue[class_=$class_, name=$name, value=$value, ]';
   }
 
-  StringParameterValue.fromJson(Map<String, dynamic> json) {
+  StringParameterValue.fromJson(Map<String, dynamic>? json) {
     if (json == null) return;
     class_ = json['_class'];
     name = json['name'];
@@ -29,7 +29,7 @@ class StringParameterValue {
     };
   }
 
-  static List<StringParameterValue> listFromJson(List<dynamic> json) {
+  static List<StringParameterValue> listFromJson(List<dynamic>? json) {
     return json == null ? <StringParameterValue>[] : json.map((value) => new StringParameterValue.fromJson(value)).toList();
   }
 
