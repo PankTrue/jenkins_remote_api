@@ -6,6 +6,7 @@ library jenkins_remote_api;
 import 'dart:async';
 import 'dart:convert';
 import 'dart:mirrors';
+import 'package:xml/xml.dart';
 import 'package:http/http.dart';
 import 'package:http_auth/http_auth.dart';
 

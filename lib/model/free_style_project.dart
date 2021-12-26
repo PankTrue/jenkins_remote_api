@@ -38,15 +38,15 @@ class FreeStyleProject {
   
   FreeStyleBuild? lastCompletedBuild = null;
   
-  String? lastFailedBuild = null;
+  FreeStyleBuild? lastFailedBuild = null;
   
   FreeStyleBuild? lastStableBuild = null;
   
   FreeStyleBuild? lastSuccessfulBuild = null;
   
-  String? lastUnstableBuild = null;
+  FreeStyleBuild? lastUnstableBuild = null;
   
-  String? lastUnsuccessfulBuild = null;
+  FreeStyleBuild? lastUnsuccessfulBuild = null;
   
   int? nextBuildNumber = null;
   
@@ -82,11 +82,11 @@ class FreeStyleProject {
     keepDependencies = json['keepDependencies'];
     lastBuild = new FreeStyleBuild.fromJson(json['lastBuild']);
     lastCompletedBuild = new FreeStyleBuild.fromJson(json['lastCompletedBuild']);
-    lastFailedBuild = json['lastFailedBuild'];
+    lastFailedBuild = new FreeStyleBuild.fromJson(json['lastFailedBuild']);
     lastStableBuild = new FreeStyleBuild.fromJson(json['lastStableBuild']);
     lastSuccessfulBuild = new FreeStyleBuild.fromJson(json['lastSuccessfulBuild']);
-    lastUnstableBuild = json['lastUnstableBuild'];
-    lastUnsuccessfulBuild = json['lastUnsuccessfulBuild'];
+    lastUnstableBuild = new FreeStyleBuild.fromJson(json['lastUnstableBuild']);
+    lastUnsuccessfulBuild = new FreeStyleBuild.fromJson(json['lastUnsuccessfulBuild']);
     nextBuildNumber = json['nextBuildNumber'];
     queueItem = json['queueItem'];
     concurrentBuild = json['concurrentBuild'];

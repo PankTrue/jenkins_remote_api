@@ -10,3 +10,4 @@ environment:
 dev_dependencies:
   http:       '0.13.4'
   http_auth:  '1.0.1'
+  xml: '5.3.1'
