@@ -7,7 +7,7 @@ environment:
   sdk: '>=2.15.0 <3.0.0'
 
 
-dev_dependencies:
+dependencies:
   http:       '0.13.4'
   http_auth:  '1.0.1'
   xml: '5.3.1'
