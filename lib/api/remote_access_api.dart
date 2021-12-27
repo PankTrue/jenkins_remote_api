@@ -5,14 +5,14 @@ class RemoteAccessApi extends BaseClient
 {
   RemoteAccessApi(String address, String username, String password) : super(address, username, password) { }
 
-  
+
   
   Future<DefaultCrumbIssuer> getCrumb() async {
     var response = (await _client!.make_http_request("/crumbIssuer/api/json", Method.GET)).body;
 
     return DefaultCrumbIssuer.fromJson(json.decode(response));
   }
-
+  
   Future<Hudson> getListAll() async {
     var response = (await _client!.make_http_request("/api/json", Method.GET)).body;
 
@@ -103,9 +103,18 @@ class RemoteAccessApi extends BaseClient
     return (await _client!.make_http_request("/createView", Method.POST, querryParams: querryParams, headers: headers, body: config_xml));
   }
 
-  Future<Response> JobBuild(String name, { Map<String, String>? params }) async {
+  Future<Response> viewConfigUpdate(String name, String config_xml) async {
 
-    //TODO: вынести добавление Crumb в базовый класс чтобы не дублировать
+    var crumb = await getCrumb();
+
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
+
+    return (await _client!.make_http_request("/view/$name/config.xml", Method.POST, headers: headers, body: config_xml));
+  }
+
+  Future<Response> jobBuild(String name, { Map<String, String>? params }) async {
+
     var crumb = await getCrumb();
 
     Map<String, String> headers = {};
@@ -115,10 +124,55 @@ class RemoteAccessApi extends BaseClient
   }
   
 
+  Future<Response> jobConfigUpdate(String name, String config_xml) async {
+
+    var crumb = await getCrumb();
+
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
+
+    return (await _client!.make_http_request("/job/$name/config.xml", Method.POST, headers: headers, body: config_xml));
+  }
 
 
+  Future<Response> jobDelete(String name) async {
 
+    var crumb = await getCrumb();
 
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
 
+    return (await _client!.make_http_request("/job/$name/doDelete", Method.POST, headers: headers));
+  }
+
+  Future<Response> jobDisable(String name) async {
+
+    var crumb = await getCrumb();
+
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
+
+    return (await _client!.make_http_request("/job/$name/disable", Method.POST, headers: headers));
+  }
+
+  Future<Response> jobEnable(String name) async {
+
+    var crumb = await getCrumb();
+
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
+
+    return (await _client!.make_http_request("/job/$name/enable", Method.POST, headers: headers));
+  }
+
+  Future<Response> jobLastBuildStop(String name) async {
+
+    var crumb = await getCrumb();
+
+    Map<String, String> headers = {};
+    headers[crumb.crumbRequestField ?? ""]  = crumb.crumb ?? "";
+
+    return (await _client!.make_http_request("/job/$name/lastBuild/stop", Method.POST, headers: headers));
+  }
 
 }
