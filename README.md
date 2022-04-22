@@ -7,11 +7,11 @@ jenkins_remote_api is free, open-source library to use jenkins api.
 
 Add dependency to your pubspec.yaml
 
-'''yaml
+```yaml
 dependencies:
   jenkins_remote_api: 
     git: 'https://github.com/PankTrue/jenkins_remote_api'
-'''
+```
 
 ## Usage
 
